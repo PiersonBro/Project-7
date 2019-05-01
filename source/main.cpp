@@ -38,11 +38,11 @@ vector<T> mergesort(vector<T>& vector) {
         return vector;
     } else {
         size_t halfSize = (vector.size() / 2);
-        typename std::vector<T>::const_iterator middle = vector.begin();
+        auto middle = vector.begin();
         std::advance(middle, halfSize);
         // auto a = std::vector<T>::iterator(middle);
-        auto left = vector(vector.begin(), middle);
-        auto right = vector(middle, vector.end());
+        auto left = std::vector<T>(vector.begin(), middle);
+        auto right = std::vector<T>(middle, vector.end());
         mergesort(left);
         mergesort(right);
 
