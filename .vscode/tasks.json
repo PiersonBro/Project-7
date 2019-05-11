@@ -11,6 +11,7 @@
 				"-o", "${workspaceFolder}/bin/main.exe",
 				"-I", "${workspaceFolder}/headers",
 				"-ggdb", "${workspaceFolder}/source/*.cpp"
+				"-std=c++11"
 			],
 			"group": {
 				"kind":"build",
